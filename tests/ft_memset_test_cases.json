@@ -1,0 +1,56 @@
+[
+		{
+				"Test case name": "Typical case 01",
+				"Buffer size": 100,
+				"Constant byte value (in decimal)": 0,
+				"Number of bytes to copy": 100
+		},
+		{
+				"Test case name": "Typical case 02",
+				"Buffer size": 50,
+				"Constant byte value (in decimal)": 64,
+				"Number of bytes to copy": 50
+		},
+		{
+				"Test case name": "Edge case 01",
+				"Buffer size": 10,
+				"Constant byte value (in decimal)": 65,
+				"Number of bytes to copy": 0
+		},
+		{
+				"Test case name": "Edge case 02",
+				"Buffer size": 0,
+				"Constant byte value (in decimal)": 97,
+				"Number of bytes to copy": 0
+		},
+		{
+				"Test case name": "Edge case 03",
+				"Buffer size": 1000,
+				"Constant byte value (in decimal)": 97,
+				"Number of bytes to copy": 1000
+		},
+		{
+				"Test case name": "Edge case 04",
+				"Buffer size": 1000,
+				"Constant byte value (in decimal)": 0,
+				"Number of bytes to copy": 1000
+		},
+		{
+				"Test case name": "Edge case 05",
+				"Buffer size": 1000,
+				"Constant byte value (in decimal)": 127,
+				"Number of bytes to copy": 1000
+		},
+		{
+				"Test case name": "Edge case 06",
+				"Buffer size": 1000,
+				"Constant byte value (in decimal)": 128,
+				"Number of bytes to copy": 1000
+		},
+		{
+				"Test case name": "Stress case 01",
+				"Buffer size": 100000000,
+				"Constant byte value (in decimal)": 97,
+				"Number of bytes to copy": 100000000
+		}
+]
