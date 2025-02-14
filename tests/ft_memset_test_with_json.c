@@ -139,7 +139,7 @@ char *read_JSON_file(const char * file_name)
 	}
 	
 	//Read the data of the JSON file into the buffer
-	if (fread(JSON_string, sizeof(char), JSON_length, fp) < JSON_length)
+	if (fread(JSON_string, sizeof(char), JSON_length, fp) < (size_t) JSON_length) // fread returns a size_t BUT JSON_length is a long
 	{
 		fprintf(stderr, "Couldn't read JSON data into buffer: %s\n", strerror(errno));
 		fclose(fp);
