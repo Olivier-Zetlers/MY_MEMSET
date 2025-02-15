@@ -5,8 +5,7 @@
 #include <stdio.h> // For fopen(), fprintf()
 #include <stdlib.h> // For malloc(), free()
 #include <string.h> // For memset(), strerror()
-#include "/home/oz/tools/cJSON/cJSON.h" // For cJSON_Parse(), cJSON_GetArraySize(), cJSON_Delete()
-#include "/home/oz/MY_PROJECTS/MY_LIBFT/my_libft.h" // For ft_memset()
+#include "../libs/cJSON/cJSON.h" // For cJSON_Parse(), cJSON_GetArraySize(), cJSON_Delete()
 
 // Define Structure for storing test cases
 struct test_case {
@@ -22,6 +21,7 @@ struct test_case {
 #define JSON_INVALID_ARRAY_ERROR 4
 #define JSON_TEST_CASE_EXTRACTION_ERROR 5
 
+void *ft_memset(void *s, int c, size_t n);
 char *read_JSON_file(const char * file_name);
 struct test_case *test_case_extraction(cJSON *root, int size);
 void test_memset(struct test_case *test_cases);
@@ -226,7 +226,7 @@ struct test_case *test_case_extraction(cJSON *root, int size)
 		return (NULL); 
 
 	// NULL-terminate test_cases array for coming traversal
-	test_cases[i+1].test_case_name = NULL;
+	test_cases[i].test_case_name = NULL; // REMINDER: i has already been incremented
 
 	return (test_cases);
 }
